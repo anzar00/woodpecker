@@ -1,0 +1,33 @@
+/* Global site styles */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: #f8f4ee;
+	color: #3d1c02;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}

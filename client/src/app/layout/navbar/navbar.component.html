@@ -1,0 +1,40 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+
+    <div class="container">
+
+        <a routerLink="/" class="brand" (click)="closeMenu()">
+            <span class="bird">🐦</span>
+            <div class="brand-text">
+                <strong>WOODPECKER</strong>
+                <span>CRAFTS & INTERIORS</span>
+            </div>
+        </a>
+
+        <ul class="nav-links desktop">
+            <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/collections" routerLinkActive="active">Collections</a></li>
+            <li><a routerLink="/interiors" routerLinkActive="active">Interiors</a></li>
+            <li><a routerLink="/heritage" routerLinkActive="active">Heritage</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+
+        <a routerLink="/contact" class="cta desktop">
+            Enquire
+        </a>
+
+        <button class="menu-btn mobile" (click)="toggleMenu()">
+            <span *ngIf="!mobileMenuOpen()">☰</span>
+            <span *ngIf="mobileMenuOpen()">✕</span>
+        </button>
+
+    </div>
+
+    <div class="mobile-panel" [class.open]="mobileMenuOpen()">
+        <a routerLink="/" (click)="closeMenu()">Home</a>
+        <a routerLink="/collections" (click)="closeMenu()">Collections</a>
+        <a routerLink="/interiors" (click)="closeMenu()">Interiors</a>
+        <a routerLink="/heritage" (click)="closeMenu()">Heritage</a>
+        <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+    </div>
+
+</nav>
