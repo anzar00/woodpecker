@@ -38,3 +38,7 @@ coverage/
 tmp/
 temp/
 *.tmp
+
+# Agents and other generated files
+.github/agents/
+docs/
